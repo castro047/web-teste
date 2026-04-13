@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Cor-padrao: #ff523b;
+    --Cor-padrao-hover: #ff3b2e;
+    --Cor-fonte: #fff;
+    --Cor-fonte-p: #333;
+    --Cor-btn-hover: #ffe0;
+    --Cor-btn-fonte: rgb(5, 5, 5);
+    --Cor-fonte-corpo: #333;
+    --Cor-fonte-corpo-leve: #777;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+    background: radial-gradient(var(--Cor-padrao-hover), var(--Cor-padrao));
+}
+
+.banner .linha {
+    margin-top: 70px;
+}
+
+.banner p {
+    color: var(--Cor-fonte);
+}
+
+p {
+    color: var(--Cor-fonte-p);
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* ===== NAVBAR RESPONSIVA ===== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px; /* espaço entre os botões */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+/* Menu Hamburguer - Mobile */
+.menu-celular {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: var(--Cor-fonte);
+}
+
+.carrinho-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.linha {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    color: var(--Cor-fonte);
+}
+
+.col-2 p {
+    font-weight: 500;
+    color: var(--Cor-fonte);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--Cor-fonte);
+    background: var(--Cor-padrao);
+    padding: 12px 35px;
+    margin: 20px 0;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+
+.btn:hover {
+    background: var(--Cor-btn-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.categorias {
+    margin: 70px 0;
+}
+
+.corpo-categorias{
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+
+.col-3 img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.col-4 {
+    flex-basis: 25%;
+    min-width: 200px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.col-4:hover {
+    transform: scale(1.1);
+}
+
+.col-4 img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.titulo {
+    position: relative;
+    line-height: 60px;
+    margin: 0 auto 80px;
+    text-align: center;
+    color: var(--Cor-fonte-corpo);
+}
+
+.titulo:after{
+    content: "";
+    background-color: var(--Cor-padrao);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4 {
+color: var(--Cor-fonte-corpo);
+font-weight: normal;
+}
+
+.col-4 p {
+font-size: 14px;
+}
+
+.classificacao ion-icon {
+    color: var(--Cor-padrao);
+}
+
+.ofertas {
+    background: radial-gradient(var(--Cor-padrao-hover), var(--Cor-padrao));
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+.col-2 .oferta-img {
+    padding: 50px;
+}
+
+small{
+    color: var(--Cor-btn-fonte);
+}
+
+.depoimento {
+    padding: 100px;
+}
+
+.depoimento .col-3 {
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.depoimento .col-3:hover{
+    transform: scale(1.1);
+}
+
+.depoimento .col-3 img{
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 2px solid;
+}
+
+.depoimento-icone {
+    font-size: 34px;
+    color: var(--Cor-padrao);
+}
+
+.col-3 p {
+    font-size: 13px;
+    color: var(--Cor-fonte-corpo-leve);
+    margin: 12px 0;
+}
+
+.depoimento .col-3h {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--Cor-fonte-corpo);
+}
+
+.marcas{
+    margin: 100px auto;
+}
+
+.col-5{
+    width: 160px;
+}
+
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.col-5 img:hover {
+    filter: grayscale(0%);
+}
+
+.rodape{
+    background: var(--Cor-btn-fonte);
+    color: var(--Cor-fonte);
+    padding: 60px 0 20px;
+    font-size: 14px;
+}
+
+.rodape p {
+    color: var(--Cor-fonte);
+}
+
+.rodape h3{
+    color: var(--Cor-fonte);
+    margin-bottom: 20px;
+}
+
+.rodape-col-1, .rodape-col-2, .rodape-col-3, .rodape-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.rodape-col-1 {
+    flex-basis: 30%;
+}
+
+.rodape-col-2{
+    flex: 1;
+    text-align: center;
+}
+
+.rodape-col-2 img{
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.rodape-col-3, .rodape-col-4 {
+    flex-basis: 12%;
+    text-align: right;
+}
+
+ul {
+    list-style-type:none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+.rodape hr{
+    border: none;
+    height: 1px;
+    background: var(--Cor-fonte);
+    margin: 20px 0;
+}
+
+.direitos {
+    text-align: center;
+}
+
+.menu-celular {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+/*listagem de produtos / pagina 2 */
+
+.novoMenu nav ul li a{
+    color: var(--Cor-btn-fonte);
+}
+
+.novoMenu {
+    background-color: var(--Cor-padrao-hover);
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.linha-2 {
+    margin: 100px auto 50px;
+    justify-content: space-between;
+}
+
+
+.linha-2 select{
+    padding: 5px;
+    border: 1px solid var(--Cor-padrao);
+}
+
+.linha-2 select:focus{
+    outline: none;
+}
+
+.paginacao {
+    margin: 0 auto 80px;
+}
+
+.paginacao span {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid var(--Cor-padrao);
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.paginacao span {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid var(--Cor-padrao);
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.paginacao span:hover {
+    background: var(--Cor-padrao);
+    color: var(--Cor-fonte);
+}
+
+
+
+.mais {
+    margin: 0 auto 80px;
+}
+
+.mais span {
+    width: 90px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid var(--Cor-padrao);
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.mais span:hover {
+    background: var(--Cor-padrao);
+    color: var(--Cor-fonte);
+}
+
+
+/*Menu celular*/ 
+@media only screen and (max-width:800px) {
+    nav ul {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #000;
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 50px 10px 0;
+    }
+
+    .menu-celular {
+        display: block;
+    }
+
+    
+    .novoMenu {
+    background: var(--Cor-fonte);
+    }
+    
+.novoMenu nav ul li a{
+    color: var(--Cor-fonte)
+}
+}
+
+@media only screen and (max-width:600px) {
+    .linha{
+        text-align: center;
+    }
+
+    .col-2,.col-3,.col-4 {
+        flex-basis: 100%;
+    }
+
+    .col-2 h1 {
+        font-size: 27px;
+    }
+
+    .rodape-col-3, .rodape-col-4 {
+        text-align: center;
+    }
+
+    .col-4 p{
+        font-size: 24px;
+    }
+    
+    .novoMenu {
+    background: var(--Cor-fonte);
+    }
+.novoMenu nav ul li a{
+    color: var(--Cor-fonte)
+}
+}
